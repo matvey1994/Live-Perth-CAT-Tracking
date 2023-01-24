@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                type: "GET",
+                url: "https://cors-anywhere.herokuapp.com/https://www.transperth.wa.gov.au/API/CatLiveTimesMap/CatLiveTimesMapApi/GetLiveCatInfo",
+                dataType: "json",
+                success: function(data) {
+                 // Do something with the data here
+                    console.log(data);
+                },
+                error: function(xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>API Request Example</h1>
+    <p>Check the browser's console for the API response</p>
+</body>
+</html>
