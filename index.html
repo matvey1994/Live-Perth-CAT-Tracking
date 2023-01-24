@@ -5,8 +5,8 @@
     <script>
         $(document).ready(function() {
             $.ajax({
-                type: "GET",
-                url: "https://cors-anywhere.herokuapp.com/https://www.transperth.wa.gov.au/API/CatLiveTimesMap/CatLiveTimesMapApi/GetLiveCatInfo",
+                type: "POST",
+                url: "http://localhost:3000/getCatInfo",
                 dataType: "json",
                 success: function(data) {
                  // Do something with the data here
@@ -21,6 +21,6 @@
 </head>
 <body>
     <h1>API Request Example</h1>
-    <p>Check the browser's console for the API response</p>
+    <p>Check the console for the API response</p>
 </body>
 </html>
